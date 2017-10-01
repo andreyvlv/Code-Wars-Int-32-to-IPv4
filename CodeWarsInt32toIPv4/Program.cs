@@ -12,15 +12,12 @@ namespace CodeWarsInt32toIPv4
         {
             Console.WriteLine(UInt32ToIP(1391959717));
             Console.WriteLine(UInt32ToIP(610294945));
+            Console.WriteLine(UInt32ToIP(0));
             Console.ReadLine();
         }
 
         public static string UInt32ToIP(uint ip)
         {
-            if (ip == 0)
-            {
-                return "0.0.0.0";
-            }
             string strIP = Convert.ToString(ip, 2);
             strIP = strIP.PadLeft(32, '0');
             Console.WriteLine(strIP);
